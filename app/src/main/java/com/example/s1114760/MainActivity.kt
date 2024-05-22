@@ -58,7 +58,6 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
         }){
             Text(text = "主要機構")
         }
-
         Image(
             painter = painterResource(id = R.drawable.maria),
             contentDescription = "圖片",
@@ -72,6 +71,24 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
             color = Color.Blue,
             modifier = modifier
         )
+        Text(
+            text = "瑪利亞基金會服務總覽",
+            color = Color.Blue,
+            modifier = modifier
+        )
+        Image(
+            painter = painterResource(id = R.drawable.service),
+            contentDescription = "圖片2",
+            alpha = 2.0f,
+            modifier = Modifier
+                .clip(CircleShape)
+                .background(Color.Black)
+        )
+        Button(onClick = { var it = Intent(context, MainActivity3::class.java)
+            context.startActivity(it)
+        }){
+            Text(text = "資工二B楊依姍")
+        }
     }
 }
 
